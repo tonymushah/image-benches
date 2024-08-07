@@ -22,7 +22,7 @@ impl ConvertToParam {
             let dyn_image = image::open(&self.file)?;
             dyn_image.save_with_format(
                 format!(
-                    "{}/{}.jpeg",
+                    "{}/{}.{}",
                     out_dir.to_str().ok_or(std::io::Error::new(
                         std::io::ErrorKind::NotFound,
                         "Cannot the input file name"
@@ -32,7 +32,8 @@ impl ConvertToParam {
                             std::io::ErrorKind::NotFound,
                             "Cannot the input file name"
                         )
-                    )?
+                    )?,
+                    self.format.extensions_str()[0]
                 ),
                 self.format,
             )?;
