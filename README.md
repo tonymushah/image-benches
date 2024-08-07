@@ -8,8 +8,8 @@ This time, I'm going test the [image][image-crate] crate to find if it's a good 
 
 ## Goal
 
-- [ ] Find the best image format for file size
-- [ ] Find the best image format for transcoding (it includes performance)
+- [x] Find the best image format for file size: JPEG
+- [ ] Find the best image format for transcoding (it includes performance) : BMP
 - [ ] Find the best image format for zstd compression
 
 ## Images References
